@@ -1,11 +1,24 @@
 .cardhelp{
     background-color: white;
-    height: 400px;
+    height:700px;
     width: 800px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.details{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.hea{
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 25px;
+    color: black;
+    
 }
 .main1{
     background-image: url("https://static.vecteezy.com/system/resources/thumbnails/002/331/442/small/watercolor-peach-brown-background-for-paper-design-vector.jpg");
@@ -37,7 +50,7 @@
 }
 .hr{
     height:2px;
-    border-width:10px;
+    border-width:5px;
     color:gray;
     background-color:"gray";
 }

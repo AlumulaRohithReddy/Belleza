@@ -1,30 +1,65 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../Login/Login.css'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { useForm } from 'react-hook-form'
+import img from '../Login/img.png'
+import { UserContext } from '../../Data/UserContext'
+import { useContext } from 'react'
+import axios from 'axios'
 function Login() {
+  let{register,handleSubmit,formState:{errors}}=useForm()
+  let [users, setUser]=useContext(UserContext)
+  let [err,seterr]=useState('')
   let navigate=useNavigate()
-  function move(){
-    navigate("/main")
+  async function login(obj){
+    let res=await axios.post('http://localhost:3001/user-api/login',obj)
+    console.log("hi",obj);
+    console.log("res",res);
+    if(res.data.message==="Login success"){
+      setUser(obj.username)
+      navigate("/Home")
+      console.log("user",users);
+
+    }
+    else{
+      seterr(res.data.message)
+    }
+    
   }
   return (
     <div>
-      <div class="d d-flex flex-column justify-content-center align-items-center">
-            <div class="image1">
-              <img src="https://mail.google.com/mail/u/0?ui=2&ik=317a1da3bd&attid=0.1&permmsgid=msg-f:1791796945846943122&th=18ddbdd432d63d92&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ9aXSS8g4gHiq0-r332naBntT-fRc2TXwajpI4lL4WynJVYrCgpcY4Ze3gEkrfkKHPZ846KHAfDgxzEk9Aw2PdL5A705h2fsLRsx1ItzckUiemjGRdTtsxpoqw&disp=emb&realattid=ii_lsznvbct0" class="img"/>
+      <div className="d d-flex flex-column justify-content-center align-items-center">
+            
+            <div className="image1">
+              <img src={img} className="img"/>
             </div>
-            <div class="card">
-            <label for="Username" class="l">Username</label>
-            <input type="text" id="Username" name="Username" placeholder="Enter Username"/>
+            {
+              err.length!==null && <h1>{err}</h1>
+            }
+            <form onSubmit={handleSubmit(login)}>
+
+            <div className="card">
+            <label for="Username" className="l">Username</label>
+            <input type="text" id="Username" placeholder="Enter Username" {...register('username',{required:true})}/>
+            {errors.Username?.type === "required" && (
+                  <p className="text-danger p-1">username is required</p>
+                )}
             <p ></p>
-            <label for="Password" class="l">Password</label>
-            <input type="password" id="Password" name="Password" placeholder="Enter Password"/>
+            <label for="Password" className="l">Password</label>
+            <input type="password" id="Password"  placeholder="Enter Password" {...register('password',{required:true})}/>
+            {errors.Password?.type === "required" && (
+                  <p className="text-danger p-1">Password is required</p>
+                )}
             <p ></p>
-            <button className="btn m-auto mt-5" onClick={move} >Login</button>
-            <p class="mt-5">Don't have an account? <a href="signup.html">Signup</a></p>
+
+            <div className="text-center card-footer ">
+               <button type="submit" className='border-success border-4 rounded' >Login</button>
+              </div>
         </div>
+            </form>
+
+            <Link to="/signup">SignUP</Link>
     </div>
-
-
 
     </div>
   )

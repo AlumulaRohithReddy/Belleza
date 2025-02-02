@@ -1,73 +1,72 @@
 import React from 'react'
 import '../ContactUS/Contactus.css'
 import { Link, NavLink } from 'react-router-dom'
+import { useForm } from 'react-hook-form'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 function Contactus() {
+  let{register,handleSubmit,formState:{errors}}=useForm()
+
+  const notify = (obj) => {
+    console.log(obj);
+    toast(`Hey ${obj.name} We have received your problem , we will reach to you very soon.`)};
   return (
     <div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
-    <div class="container">
-      <NavLink class="navbar-brand mr-auto" to=''> 
-        <img
-          src="https://mail.google.com/mail/u/0?ui=2&ik=317a1da3bd&attid=0.1&permmsgid=msg-f:1791796945846943122&th=18ddbdd432d63d92&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ_wIMCxezeFTyU7DnojN9pTI29VeyahI1N2rdyGXNafmNVJ-PmQy7SD-D2se6TIw6i34syWS6sHRbQRwQsbXk9AEucfNA2bc9QrBeivJDq-nJz5qEswEYfy08w&disp=emb&realattid=ii_lsznvbct0"
-          class="logo"
-        />
-      </NavLink>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav  ">
-          <Link class="nav-link active" id="navItem1" to='/main'>
-            Home
-          </Link>
-          <Link class="nav-link active" id="navItem1" to='/occ'>
-            Occasions
-            
-          </Link>
-          <Link class="nav-link active" id="navItem1" to='/Gall'>
-            Gallery
-           
-          </Link>
-          <Link class="nav-link active" id="navItem1" to='/'>
-            Reviews
-          
-          </Link>
-          <Link class="nav-link active" id="navItem1" to='/contact'>
-            Contact Us
-          
-          </Link>
-        </div>
-      </div>
-    </div>
-  </nav>
+        
     <div className='main1'>
         <div className='cardhelp'>
+          <form onSubmit={handleSubmit(notify)}>
             <h1 className='head'>We Are Here To Help You</h1>
-            <input type="text" id="Username" name="name" className='mb-2' height="40px" width="500px" placeholder="Name"/>
-            <input type="text" id="email" name="mail" className='mb-2' width="500px" placeholder="Email"/>
-            <input type="text" id="Contact" name="Contact"  className='mb-2' width="500px" placeholder="Contact"/>
-            <textarea type="text" id="message" name="Message" rows='5' cols="23" className='mb-2' width="500px" placeholder="Message"></textarea>
-            <button className="b3 m-auto mt-5">Submit</button>
+            <div  className='form mb-1'>
+            <label htmlFor="username" className='form-check-label hea'>Username 
+                
+                </label>
+            <input type="text" id="Username"  className='form-control mb-2' height="40px" width="500px" placeholder="Name" {...register('name',{required:true})} />
+            {errors.name?.type === "required" && (
+                  <p className="text-danger p-1">username is required</p>
+                )}
+            </div>
+            <div  className='form mb-1'>
+            <label htmlFor="email" className='form-check-label hea'>Email
+            </label>
+            <input type="text" id="email"  className='form-control  mb-2' width="500px" placeholder="Email"  {...register('mail',{required:true})}/>
+            {errors.mail?.type === "required" && (
+                  <p className="text-danger p-1">Email is required</p>
+                )}
+            </div>
+            <div  className='form mb-1'>
+            <label htmlFor="Number" className='form-check-label hea'>Contact
+            </label>
+            <input type="text" id="Contact"  className='form-control mb-2' width="500px" placeholder="Contact"  {...register('Contact',{required:true})}/>
+            {errors.Contact?.type === "required" && (
+                  <p className="text-danger p-1"> is required</p>
+                )}
+            </div>
+            <div className='form mb-1'>
+            <label htmlFor="Message" className='form-check-label hea'>Message
+            </label>
+            <textarea type="text" id="message"  rows='5' cols="23" className='form-control mb-2' width="500px" placeholder="Message" {...register('Message',{required:true})}></textarea>
+            {errors.Message?.type === "required" && (
+                  <p className="text-danger p-1"> is required</p>
+                )}
+            </div>
+            <div className="text-center">
+            <button className="b3 m-auto mt-5" type="submit">Submit</button>
+            </div>
+            <ToastContainer position='top-center'/>
             <hr className='hr'/>
-
+            <div className='details'>
+              <h1 className='hea'>Contact-6301176922</h1>
+              <h1 className='hea'>belleza2819@gmail.com</h1>
+            </div>
+            <div className="text-center">
+              <h1 className='hea'>123 Pragathi Nagar, Hyderabad, India.</h1>
+            </div>
+            </form>
         </div>       
     </div>
-     <div class="footer-section pt-5 pb-5">
-     <div class="container">
-       <div class="row">
-         <div class="col-12 text-center">
-           <img
-             src="https://mail.google.com/mail/u/0?ui=2&ik=317a1da3bd&attid=0.1&permmsgid=msg-f:1791796945846943122&th=18ddbdd432d63d92&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ_wIMCxezeFTyU7DnojN9pTI29VeyahI1N2rdyGXNafmNVJ-PmQy7SD-D2se6TIw6i34syWS6sHRbQRwQsbXk9AEucfNA2bc9QrBeivJDq-nJz5qEswEYfy08w&disp=emb&realattid=ii_lsznvbct0"
-             class="logo"
-           />
-           <h1 class="footer-section-mail-id">belleza2819@gmail.com</h1>
-           <p class="footer-section-address">
-             123 Pragathi Nagar, Hyderabad, India.
-           </p>
-         </div>
-       </div>
-     </div>
-   </div> 
+    
    </div>
   )
 }

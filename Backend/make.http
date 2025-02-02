@@ -1,0 +1,34 @@
+GET http://localhost:3001/make-api/location
+###
+GET http://localhost:3001/user-api
+
+###
+POST http://localhost:3001/make-api/add
+Content-Type: application/json
+
+{
+     "name": "Santosh ",
+              "logo": "https://img.freepik.com/premium-vector/golden-lady-beauty-feminine-logo-design-haircut-salon-logo-vector_150826-262.jpg?w=740",
+              "rating": 4.5,
+              "location": "Banglore",
+              "price": 2500
+}
+GET http://localhost:3001/make-api/
+
+###
+POST http://localhost:3001/user-api/user
+Content-Type: application/json
+
+{
+     "username": "Santos ",
+    "password":"hi",
+    "email":"a@GMAIL.COM"
+}
+###
+POST http://localhost:3001/user-api/login
+Content-Type: application/json
+
+{
+     "username": "abhi",
+    "password":"abhi"
+}

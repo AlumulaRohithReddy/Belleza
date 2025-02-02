@@ -1,0 +1,86 @@
+{
+    "users":[
+        [
+            {
+              "name": "Reena Reddy",
+              "logo": "https://img.freepik.com/premium-vector/afro-beauty-logo-afro-hairstyleafro-beautyblack-beautyafro-hair_715895-244.jpg?size=626&ext=jpg&ga=GA1.1.323125330.1718535382&semt=ais_user",
+              "rating": 4.8,
+              "location": "Hyderabad, Telangana",
+              "price": 5000
+            },
+            {
+              "name": "Sita Reddy",
+              "logo": "https://img.freepik.com/free-vector/gradient-hair-salon-logo-template_23-2148832422.jpg?size=626&ext=jpg&uid=R153478371&ga=GA1.1.323125330.1718535382&semt=ais_user",
+              "rating": 4.7,
+              "location": "Mumbai",
+              "price": 4500
+            },
+            {
+              "name": "Krishma",
+              "logo": "https://img.freepik.com/premium-vector/golden-lady-beauty-feminine-logo-design-haircut-salon-logo-vector_150826-262.jpg?size=626&ext=jpg&uid=R153478371&ga=GA1.1.323125330.1718535382&semt=ais_user",
+              "rating": 4.3,
+              "location": "Hyderabad",
+              "price": 4600
+            },
+            {
+              "name": "Lakshmi ",
+              "logo": "https://img.freepik.com/premium-vector/beautiful-woman-line-art-luxury-logo-design_592182-229.jpg?size=626&ext=jpg&uid=R153478371&ga=GA1.1.323125330.1718535382&semt=ais_user",
+              "rating": 4.6,
+              "location": "Banglore",
+              "price": 5200
+            },
+            {
+              "name": "Venky",
+              "logo": "https://img.freepik.com/premium-vector/beauty-woman-face-logo_949496-276.jpg?size=626&ext=jpg&uid=R153478371&ga=GA1.1.323125330.1718535382&semt=ais_user",
+              "rating": 4.8,
+              "location": "Chennai",
+              "price": 4500
+            },
+            {
+              "name": " Devi",
+              "logo": "https://img.freepik.com/premium-vector/womens-beauty-fashion-logo-vector_852937-968.jpg?w=900",
+              "rating": 4.4,
+              "location": " Telangana",
+              "price": 4700
+            },
+           
+            {
+              "name": "Radha ",
+              "logo": "https://img.freepik.com/free-vector/logo-template-design_1289-67.jpg?size=626&ext=jpg&ga=GA1.1.323125330.1718535382&semt=ais_user",
+              "rating": 4.7,
+              "location": "Mumbai",
+              "price": 5000
+            },
+            
+            {
+              "name": "Uma Maheshwari",
+              "logo": "https://img.freepik.com/premium-vector/beauty-spa-logo-template-design_621064-51.jpg?w=740",
+              "rating": 4.6,
+              "location": "Andhra Pradesh",
+              "price": 3200
+            },
+            {
+              "name": "Arjun Reddy",
+              "logo": "https://img.freepik.com/free-vector/hand-drawn-woman-logo-template_23-2148856315.jpg?w=740&t=st=1718916564~exp=1718917164~hmac=d65ee2a71ebeb8508f9ef448bb8c5d55e4d6dd835987db200f9dc6fd2200b8ee",
+              "rating": 4.8,
+              "location": " Telangana",
+              "price": 3500
+            },
+            {
+              "name": "Priya ",
+              "logo": "https://img.freepik.com/premium-vector/golden-lady-beauty-feminine-logo-design-haircut-salon-logo-vector_150826-262.jpg?w=740",
+              "rating": 4.4,
+              "location": "Chennai",
+              "price": 2700
+            },
+            {
+              "name": "Santosh ",
+              "logo": "https://img.freepik.com/premium-vector/golden-lady-beauty-feminine-logo-design-haircut-salon-logo-vector_150826-262.jpg?w=740",
+              "rating": 4.5,
+              "location": "Banglore",
+              "price": 2500
+            }
+           
+          ]
+  ]
+}

@@ -3,11 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import UserStore from './Data/UserStore';
+import OccStore from './Data/OccS';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <OccStore>
+    <UserStore>
     <App />
+
+    </UserStore>
+    </OccStore>
   </React.StrictMode>
 );
 

@@ -2,7 +2,7 @@
     background-image: url("https://res.cloudinary.com/dohmv9cgy/image/upload/f_auto,q_auto/q0ksvrftuz3vm6ymm1t4");
     
     height: 400px;
-    width: 400px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -10,9 +10,8 @@
 }
 .c3{
     background-image: url("https://res.cloudinary.com/dohmv9cgy/image/upload/f_auto,q_auto/gutlnsdultzlvtjtmo0g");
-    
     height: 400px;
-    width: 400px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -22,7 +21,17 @@
     background-image: url("https://res.cloudinary.com/dohmv9cgy/image/upload/f_auto,q_auto/ecixiqu2fqhl1nnboxqh");
    
     height: 400px;
-    width: 400px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-size: cover;
+}
+.c5{
+    background-image: url("https://www.wedium.com/wp-content/uploads/2022/03/best-groom-makeup-in-bbsr.jpg");
+   
+    height: 400px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -41,7 +50,7 @@
     font-family: "Roboto";
     font-size: 20px;
     flex-grow: auto;
-    width: 400px;
+    width: 300px;
     text-align: center;
     
     align-self: center;

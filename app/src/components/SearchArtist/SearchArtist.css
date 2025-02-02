@@ -1,0 +1,58 @@
+.main-container{
+    padding: 10px;
+    background-color: white;
+    height: 500px;
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    box-shadow: inset;
+    
+}
+.loc{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+}
+.search-results{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 400px;
+    width: 688px;
+    overflow: auto;
+}
+.lo{
+    height: 100px;
+    width: 100px;
+    text-align: center;
+}
+.artist{
+    font-family: 'roboto';
+    font-size: 20px;
+    font-weight: bold;
+
+}
+.span{
+    font-family: 'roboto';
+    font-size: 20px;
+    font-weight: bold;
+    color:pink;
+    margin: auto;
+}
+.Rating{
+    font-family: 'roboto';
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+}
+.sub{
+    align-self: flex-end;
+}
